@@ -5,9 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.util.ArrayList;
 
@@ -15,7 +13,7 @@ public class TestingLab2{
 
         private static WebDriver driver;
 
-        @BeforeSuite
+        @BeforeTest
         public void beforeSuite() {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("start-maximized");
@@ -23,7 +21,7 @@ public class TestingLab2{
             Config.init(driver);
         }
 
-        @AfterSuite
+        @AfterTest
         public void afterSuite() {
             driver.close();
         }
