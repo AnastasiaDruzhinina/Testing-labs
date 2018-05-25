@@ -7,6 +7,9 @@ import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
+// TODO your code does not match with code convention !
+// TODO take a look on IDEA warnings...
+// TODO PO should be in another package - src/main/...
 public class TestingLab1 extends Config {
 
         void checkTitle(String title) {
