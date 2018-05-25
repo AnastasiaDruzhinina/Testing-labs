@@ -5,9 +5,9 @@ import org.openqa.selenium.support.PageFactory;
 
 
 class Config {
-    static TestSite testSite;
+    public static TestSite testSite;
 
-    static void init(WebDriver driver) {
+    public static void init(WebDriver driver) {
         testSite = PageFactory.initElements(driver, TestSite.class);
     }
 }

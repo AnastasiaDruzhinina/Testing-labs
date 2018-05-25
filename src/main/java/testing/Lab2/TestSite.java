@@ -41,38 +41,38 @@ public class TestSite {
         this.driver = driver;
     }
 
-    void open(String Url) {
+    public void open(String Url) {
         driver.navigate().to(Url);
     }
 
-    String getUrl() {
+    public String getUrl() {
         return driver.getCurrentUrl();
     }
 
-    String getTitle() {
+    public String getTitle() {
         return driver.getTitle();
     }
 
-    void login(String login, String password) {
+    public void login(String login, String password) {
         loginMenu.click();
         loginInput.sendKeys(login);
         passwordInput.sendKeys(password);
         submitButton.click();
     }
 
-    String getUsername() {
+    public String getUsername() {
         return userName.getText();
     }
 
-    String getMainHeader() {
+    public String getMainHeader() {
         return mainHeader.getText();
     }
 
-    String getMainText() {
+    public String getMainText() {
         return mainText.getText();
     }
 
-    ArrayList<String> getPictureTexts() {
+    public ArrayList<String> getPictureTexts() {
         ArrayList<String> al = new ArrayList<>();
 
         for (WebElement pictureText : pictureTexts)
@@ -81,7 +81,7 @@ public class TestSite {
         return al;
     }
 
-    int getPictureNumber() {
+    public int getPictureNumber() {
         return pictures.size();
     }
 }
