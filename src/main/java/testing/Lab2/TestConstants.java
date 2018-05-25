@@ -1,21 +1,21 @@
 package testing.Lab2;
 
-import java.util.ArrayList;
-import java.util.List;
+class TestConstants {
 
-public class TestConstants {
-
-    public static String url =
+    static final String url =
             "https://jdi-framework.github.io/tests/index.htm";
 
-    public static String login =
+    static final String title =
+            "Index Page";
+
+    static final String login =
             "epam";
-    public static String password =
+    static final String password =
             "1234";
-    public static String username =
+    static final String username =
             "PITER CHAILOVSKII";
 
-    public static String[] pictureTexts = new String[] {
+    static final String[] pictureTexts = new String[] {
             "To include good practices\n" +
                     "and ideas from successful\n" +
                     "EPAM projec",
@@ -28,9 +28,9 @@ public class TestConstants {
                     "wish to get more…"
     };
 
-    public static String mainHeader =
+    static final String mainHeader =
             "EPAM FRAMEWORK WISHES…";
-    public static String mainText =
+    static final String mainText =
             "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, " +
                     "SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA." +
                     " UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI" +

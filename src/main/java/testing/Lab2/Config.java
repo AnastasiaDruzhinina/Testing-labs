@@ -4,10 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class Config {
-    public static TestSite testSite;
+class Config {
+    static TestSite testSite;
 
-    public static void init(WebDriver driver) {
+    static void init(WebDriver driver) {
         testSite = PageFactory.initElements(driver, TestSite.class);
     }
 }

@@ -10,18 +10,16 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 
 public class TestingLab2{
 
-        static WebDriver driver;
+        private static WebDriver driver;
 
         @BeforeSuite
         public void beforeSuite() {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("start-maximized");
             driver = new ChromeDriver(options);
-            driver.navigate().to(TestConstants.url);
             Config.init(driver);
         }
 
@@ -32,7 +30,11 @@ public class TestingLab2{
 
         @Test
         public void Lab2Test() {
+            Config.testSite.open(TestConstants.url);
+
             Assert.assertEquals(Config.testSite.getUrl(), TestConstants.url);
+
+            Assert.assertEquals(Config.testSite.getTitle(), TestConstants.title);
 
             Config.testSite.login(TestConstants.login, TestConstants.password);
             Assert.assertEquals(Config.testSite.getUsername(), TestConstants.username);

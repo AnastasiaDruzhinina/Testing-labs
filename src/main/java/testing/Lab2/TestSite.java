@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestSite {
-    private WebDriver driver;
+    private final WebDriver driver;
 
     @FindBy(css = ".dropdown-toggle[href='#']")
     private WebElement loginMenu;
@@ -41,47 +41,47 @@ public class TestSite {
         this.driver = driver;
     }
 
-    public void open(String Url) {
+    void open(String Url) {
         driver.navigate().to(Url);
     }
 
-    public String getUrl() {
+    String getUrl() {
         return driver.getCurrentUrl();
     }
 
-    public String getTitle() {
+    String getTitle() {
         return driver.getTitle();
     }
 
-    public void login(String login, String password) {
+    void login(String login, String password) {
         loginMenu.click();
         loginInput.sendKeys(login);
         passwordInput.sendKeys(password);
         submitButton.click();
     }
 
-    public String getUsername() {
+    String getUsername() {
         return userName.getText();
     }
 
-    public String getMainHeader() {
+    String getMainHeader() {
         return mainHeader.getText();
     }
 
-    public String getMainText() {
+    String getMainText() {
         return mainText.getText();
     }
 
-    public ArrayList<String> getPictureTexts() {
-        ArrayList<String> al = new ArrayList<String>();
+    ArrayList<String> getPictureTexts() {
+        ArrayList<String> al = new ArrayList<>();
 
-        for (int i = 0; i < pictureTexts.size(); i++)
-            al.add(pictureTexts.get(i).getText());
+        for (WebElement pictureText : pictureTexts)
+            al.add(pictureText.getText());
 
         return al;
     }
 
-    public int getPictureNumber() {
+    int getPictureNumber() {
         return pictures.size();
     }
 }

@@ -10,14 +10,20 @@ import java.util.ArrayList;
 // TODO your code does not match with code convention !
 // TODO take a look on IDEA warnings...
 // TODO PO should be in another package - src/main/...
+
 public class TestingLab1 extends Config {
+        @Test
+        public void Lab1Test() {
+            String TestUrl = "https://jdi-framework.github.io/tests/index.htm";
 
-        void checkTitle(String title) {
+            //Переходим по ссылке в браузере
+            driver.get(TestUrl);
+            Assert.assertEquals(driver.getCurrentUrl(), TestUrl);
+
             //Проверка текста в заголовке страницы
-            Assert.assertEquals(driver.getTitle(), title);
-        }
+            Assert.assertEquals(driver.getTitle(), "Index Page");
 
-        void login() {
+            //Данные аккаунта
             String username = "epam";
             String pass = "1234";
             String name = "PITER CHAILOVSKII";
@@ -31,9 +37,13 @@ public class TestingLab1 extends Config {
             //Проверка, что имя пользователя отображено и совпадает с нужным
             Assert.assertTrue(driver.findElement(By.cssSelector("[href = '#']")).isDisplayed());
             Assert.assertEquals(driver.findElement(By.cssSelector("[href = '#']")).getText(), name);
-        }
 
-        void checkPictureText() {
+            //Проверка текста в заголовке страницы
+            Assert.assertEquals(driver.getTitle(), "Index Page");
+
+            //Проверка, что картинок 4
+            Assert.assertEquals((driver.findElements(By.cssSelector("[class = 'benefit-icon']")).size()), 4);
+
             //Получаем тексты под картинками
             ArrayList<WebElement> PictureTexts =
                     (ArrayList<WebElement>) driver.findElements(By.cssSelector("[class = 'benefit-txt']"));
@@ -52,9 +62,7 @@ public class TestingLab1 extends Config {
                     "(about 20 internal and\n" +
                     "some external projects),\n" +
                     "wish to get more…");
-        }
 
-        void checkTexts() {
             //Проверка текста в центре старницы
             String header = "EPAM FRAMEWORK WISHES…";
             String text_bellow = "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD " +
@@ -65,27 +73,5 @@ public class TestingLab1 extends Config {
 
             Assert.assertEquals((driver.findElement(By.cssSelector(".main-title"))).getText(), header);
             Assert.assertEquals((driver.findElement(By.cssSelector(".main-txt"))).getText(), text_bellow);
-        }
-
-        @Test
-        public void Lab1Test() {
-            String TestUrl = "https://jdi-framework.github.io/tests/index.htm";
-
-            //Переходим по ссылке в браузере
-            driver.get(TestUrl);
-            Assert.assertEquals(driver.getCurrentUrl(), TestUrl);
-
-            checkTitle("Index Page");
-
-            login();
-
-            checkTitle("Index Page");
-
-            //Проверка, что картинок 4
-            Assert.assertEquals((driver.findElements(By.cssSelector("[class = 'benefit-icon']")).size()), 4);
-
-            checkPictureText();
-
-            checkTexts();
         }
 }
