@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import java.util.ArrayList;
 import java.util.List;
 
+// TODO you should divided this file, couse` Site should consist of Pages,
+// TODO page should consist of WebElements, etc...
 public class TestSite {
     private final WebDriver driver;
 

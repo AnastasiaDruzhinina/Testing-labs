@@ -1,5 +1,7 @@
 package testing.Lab2;
 
+
+// TODO constants should be named like CONSTANT_NAME
 class TestConstants {
 
     static final String url =

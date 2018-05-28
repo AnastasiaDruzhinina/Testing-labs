@@ -7,9 +7,11 @@ import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
-// TODO your code does not match with code convention !
-// TODO take a look on IDEA warnings...
-// TODO PO should be in another package - src/main/...
+// TODO your code does not match with code convention ! -> x2
+// TODO that's okay, but you have to reformat your code !! take a look on IDEA hot keys...
+// TODO same story for Lab2, Lab3
+// take a look on IDEA warnings... -> done!
+// PO should be in another package - src/main/... -> done
 
 public class TestingLab1 extends Config {
         @Test

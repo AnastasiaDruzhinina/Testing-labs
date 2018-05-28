@@ -70,6 +70,16 @@ public class TestingLab3 {
             differentElementsPage.checkCheckboxInLog(DifferentElementsConstants.checkbox3Name.strValue, "false");
         }
 
+        // TODO this test wont work. Tests should be independent...
+        // Timeout: 4 s.
+        // Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//div/a[@href='#'])[2]"}
+        // at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:31)
+        // at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:82)
+        // at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:119)
+        // at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:65)
+        // at com.sun.proxy.$Proxy9.getText(Unknown Source)
+        // at testing.Lab3.pageObjects.DatesPage.dragAndDropSliders(DatesPage.java:33)
+        // at testing.Lab3.TestingLab3.Lab3Task2(TestingLab3.java:81)
         @Test
         public void Lab3Task2() {
             indexPage.open(IndexConstants.url.strValue);
