@@ -2,32 +2,32 @@ package testing.Lab3.constants;
 
 public enum DifferentElementsConstants {
 
-    checkboxNumber(4),
-    dropdownNumber(4),
+    CHECKBOX_NUMBER(4),
+    DROPDOWN_NUMBER(4),
 
-    checkbox1Name("Water"),
-    checkbox2Name("Earth"),
-    checkbox3Name("Wind"),
-    checkbox4Name("Fire"),
+    CHECKBOX_1_NAME("Water"),
+    CHECKBOX_2_NAME("Earth"),
+    CHECKBOX_3_NAME("Wind"),
+    CHECKBOX_4_NAME("Fire"),
 
-    radio1value("Gold"),
-    radio2value("Silver"),
-    radio3value("Bronze"),
-    radio4value("Selen"),
+    RADIO_1_VALUE("Gold"),
+    RADIO_2_VALUE("Silver"),
+    RADIO_3_VALUE("Bronze"),
+    RADIO_4_VALUE("Selen"),
 
-    dropdown1value("Red"),
-    dropdown2value("Green"),
-    dropdown3value("Blue"),
-    dropdown4value("Yellow");
+    DROPDOWN_1_VALUE("Red"),
+    DROPDOWN_2_VALUE("Green"),
+    DROPDOWN_3_VALUE("Blue"),
+    DROPDOWN_4_VALUE("Yellow");
 
     public String strValue;
     public Integer intValue;
 
-    DifferentElementsConstants(String str){
+    DifferentElementsConstants(String str) {
         strValue = str;
     }
 
-    DifferentElementsConstants(Integer i){
+    DifferentElementsConstants(Integer i) {
         intValue = i;
     }
 }

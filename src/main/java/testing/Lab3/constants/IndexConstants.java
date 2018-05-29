@@ -1,15 +1,15 @@
 package testing.Lab3.constants;
 
 public enum IndexConstants {
-    url("https://jdi-framework.github.io/tests/index.htm"),
-    title("Index Page"),
+    URL("https://jdi-framework.github.io/tests/index.htm"),
+    TITLE("Index Page"),
 
-    login("epam"),
-    password("1234"),
-    username("PITER CHAILOVSKII"),
+    LOGIN("epam"),
+    PASSWORD("1234"),
+    USERNAME("PITER CHAILOVSKII"),
 
-    pictureNumber(4),
-    pictureTexts(new String[] {
+    PICTURE_NUMBER(4),
+    PICTURE_TEXTS(new String[]{
             "To include good practices\n" +
                     "and ideas from successful\n" +
                     "EPAM projec",
@@ -22,14 +22,14 @@ public enum IndexConstants {
                     "wish to get more…"
     }),
 
-    mainHeader("EPAM FRAMEWORK WISHES…"),
-    mainText("LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, " +
-                    "SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA." +
-                    " UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI" +
-                    " UT ALIQUIP EX EA COMMODO CONSEQUAT DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN" +
-                    " VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR."),
+    MAIN_HEADER("EPAM FRAMEWORK WISHES…"),
+    MAIN_TEXT("LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, " +
+            "SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA." +
+            " UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI" +
+            " UT ALIQUIP EX EA COMMODO CONSEQUAT DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN" +
+            " VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR."),
 
-    dropdownTexts(new String[] {
+    DROPDOWN_TEXTS(new String[]{
             "Support",
             "Dates",
             "Complex Table",
@@ -42,15 +42,15 @@ public enum IndexConstants {
     public String strValue;
     public Integer intValue;
 
-    IndexConstants(String str){
+    IndexConstants(String str) {
         strValue = str;
     }
 
-    IndexConstants(Integer i){
+    IndexConstants(Integer i) {
         intValue = i;
     }
 
-    IndexConstants(String[] i){
+    IndexConstants(String[] i) {
         strArrayValue = i;
     }
 }

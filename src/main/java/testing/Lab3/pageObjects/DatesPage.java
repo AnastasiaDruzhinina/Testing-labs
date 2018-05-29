@@ -4,7 +4,7 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.text;
 
 public class DatesPage {
     @FindBy(xpath = "(//div/a[@href='#'])[1]")
@@ -20,11 +20,11 @@ public class DatesPage {
     private void dragAndDropSlider(SelenideElement slider, int value) {
         Selenide.actions().clickAndHold(slider).build().perform();
 
-        while(value > Integer.parseInt(slider.getText()))
-            Selenide.actions().moveByOffset(1,0).build().perform();
+        while (value > Integer.parseInt(slider.getText()))
+            Selenide.actions().moveByOffset(1, 0).build().perform();
 
-        while(value < Integer.parseInt(slider.getText()))
-            Selenide.actions().moveByOffset(-1,0).build().perform();
+        while (value < Integer.parseInt(slider.getText()))
+            Selenide.actions().moveByOffset(-1, 0).build().perform();
 
         Selenide.actions().release().build().perform();
     }
@@ -33,9 +33,7 @@ public class DatesPage {
         if (leftValue > Integer.parseInt(rightSlider.getText())) {
             dragAndDropSlider(rightSlider, rightValue);
             dragAndDropSlider(leftSlider, leftValue);
-        }
-
-        else {
+        } else {
             dragAndDropSlider(leftSlider, leftValue);
             dragAndDropSlider(rightSlider, rightValue);
         }

@@ -2,20 +2,20 @@ package testing.Lab2;
 
 class TestConstants {
 
-    static final String url =
+    static final String URL =
             "https://jdi-framework.github.io/tests/index.htm";
 
-    static final String title =
+    static final String TITLE =
             "Index Page";
 
-    static final String login =
+    static final String LOGIN =
             "epam";
-    static final String password =
+    static final String PASSWORD =
             "1234";
-    static final String username =
+    static final String USERNAME =
             "PITER CHAILOVSKII";
 
-    static final String[] pictureTexts = new String[] {
+    static final String[] PICTURE_TEXTS = new String[]{
             "To include good practices\n" +
                     "and ideas from successful\n" +
                     "EPAM projec",
@@ -28,9 +28,9 @@ class TestConstants {
                     "wish to get more…"
     };
 
-    static final String mainHeader =
+    static final String MAIN_HEADER =
             "EPAM FRAMEWORK WISHES…";
-    static final String mainText =
+    static final String MAIN_TEXT =
             "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, " +
                     "SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA." +
                     " UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI" +

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestSite {
+public class TestPage {
     private final WebDriver driver;
 
     @FindBy(css = ".dropdown-toggle[href='#']")
@@ -37,7 +37,7 @@ public class TestSite {
     @FindBy(css = ".main-txt")
     private WebElement mainText;
 
-    public TestSite(WebDriver driver) {
+    public TestPage(WebDriver driver) {
         this.driver = driver;
     }
 
