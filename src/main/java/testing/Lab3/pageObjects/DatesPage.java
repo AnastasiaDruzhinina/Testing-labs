@@ -7,10 +7,10 @@ import org.openqa.selenium.support.FindBy;
 import static com.codeborne.selenide.Condition.text;
 
 public class DatesPage {
-    @FindBy(xpath = "(//div/a[@href='#'])[1]")
+    @FindBy(xpath = "(//div[@jdi-type='IRange']/a[@href='#'])[1]")
     private SelenideElement leftSlider;
 
-    @FindBy(xpath = "(//div/a[@href='#'])[2]")
+    @FindBy(xpath = "(//div[@jdi-type='IRange']/a[@href='#'])[2]")
     private SelenideElement rightSlider;
 
     public DatesPage() {
