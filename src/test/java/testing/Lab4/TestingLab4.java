@@ -1,8 +1,6 @@
-package testing.Lab3;
+package testing.Lab4;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import testing.Lab3.constants.DatesConstants;
@@ -13,26 +11,21 @@ import testing.Lab3.pageObjects.DifferentElementsPage;
 import testing.Lab3.pageObjects.IndexPage;
 
 
-public class TestingLab3 {
+public class TestingLab4 {
     private static IndexPage indexPage;
     private static DifferentElementsPage differentElementsPage;
     private static DatesPage datesPage;
 
     @BeforeClass
-    public void beforeClass() {
+    public void beforeSuite() {
         Configuration.browser = "chrome";
         indexPage = new IndexPage();
         differentElementsPage = new DifferentElementsPage();
         datesPage = new DatesPage();
     }
 
-    @AfterClass
-    public void afterClass() {
-        Selenide.close();
-    }
-
     @Test
-    public void Lab3Task1() {
+    public void Task() {
         indexPage.open(IndexConstants.URL.strValue);
 
         indexPage.checkTitle(IndexConstants.TITLE.strValue);
@@ -77,17 +70,17 @@ public class TestingLab3 {
         differentElementsPage.checkCheckboxInLog(DifferentElementsConstants.CHECKBOX_3_NAME.strValue, "false");
     }
 
-    @Test
-    public void Lab3Task2() {
-        indexPage.open(IndexConstants.URL.strValue);
-
-        indexPage.checkTitle(IndexConstants.TITLE.strValue);
-
-        indexPage.relocateToDates();
-
-        datesPage.dragAndDropSliders(DatesConstants.FIRST_TEST.values[0], DatesConstants.FIRST_TEST.values[1]);
-        datesPage.dragAndDropSliders(DatesConstants.SECOND_TEST.values[0], DatesConstants.SECOND_TEST.values[1]);
-        datesPage.dragAndDropSliders(DatesConstants.THIRD_TEST.values[0], DatesConstants.THIRD_TEST.values[1]);
-        datesPage.dragAndDropSliders(DatesConstants.FOURTH_TEST.values[0], DatesConstants.FOURTH_TEST.values[1]);
-    }
+//    @Test
+//    public void Lab3Task2() {
+//        indexPage.open(IndexConstants.URL.strValue);
+//
+//        indexPage.checkTitle(IndexConstants.TITLE.strValue);
+//
+//        indexPage.relocateToDates();
+//
+//        datesPage.dragAndDropSliders(DatesConstants.FIRST_TEST.values[0], DatesConstants.FIRST_TEST.values[1]);
+//        datesPage.dragAndDropSliders(DatesConstants.SECOND_TEST.values[0], DatesConstants.SECOND_TEST.values[1]);
+//        datesPage.dragAndDropSliders(DatesConstants.THIRD_TEST.values[0], DatesConstants.THIRD_TEST.values[1]);
+//        datesPage.dragAndDropSliders(DatesConstants.FOURTH_TEST.values[0], DatesConstants.FOURTH_TEST.values[1]);
+//    }
 }
