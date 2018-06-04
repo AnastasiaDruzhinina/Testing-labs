@@ -36,4 +36,4 @@ packages/
 .idea
 *.iml
 [Bb]uild
-allure*
+/allure*/
