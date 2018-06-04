@@ -25,7 +25,7 @@ public class TestingLab4 {
     }
 
     @Test
-    public void Task() {
+    public void Task1() {
         indexPage.open(IndexConstants.URL.strValue);
 
         indexPage.checkTitle(IndexConstants.TITLE.strValue);
@@ -70,17 +70,17 @@ public class TestingLab4 {
         differentElementsPage.checkCheckboxInLog(DifferentElementsConstants.CHECKBOX_3_NAME.strValue, "false");
     }
 
-//    @Test
-//    public void Lab3Task2() {
-//        indexPage.open(IndexConstants.URL.strValue);
-//
-//        indexPage.checkTitle(IndexConstants.TITLE.strValue);
-//
-//        indexPage.relocateToDates();
-//
-//        datesPage.dragAndDropSliders(DatesConstants.FIRST_TEST.values[0], DatesConstants.FIRST_TEST.values[1]);
-//        datesPage.dragAndDropSliders(DatesConstants.SECOND_TEST.values[0], DatesConstants.SECOND_TEST.values[1]);
-//        datesPage.dragAndDropSliders(DatesConstants.THIRD_TEST.values[0], DatesConstants.THIRD_TEST.values[1]);
-//        datesPage.dragAndDropSliders(DatesConstants.FOURTH_TEST.values[0], DatesConstants.FOURTH_TEST.values[1]);
-//    }
+    @Test
+    public void Task2() {
+        indexPage.open(IndexConstants.URL.strValue);
+
+        indexPage.checkTitle(IndexConstants.TITLE.strValue);
+
+        indexPage.relocateToDates();
+
+        datesPage.dragAndDropSliders(DatesConstants.FIRST_TEST.values[0], DatesConstants.FIRST_TEST.values[1]);
+        datesPage.dragAndDropSliders(DatesConstants.SECOND_TEST.values[0], DatesConstants.SECOND_TEST.values[1]);
+        datesPage.dragAndDropSliders(DatesConstants.THIRD_TEST.values[0], DatesConstants.THIRD_TEST.values[1]);
+        datesPage.dragAndDropSliders(DatesConstants.FOURTH_TEST.values[0], DatesConstants.FOURTH_TEST.values[1]);
+    }
 }
