@@ -2,6 +2,7 @@ package testing.Lab4.pageObjects;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import org.openqa.selenium.support.FindBy;
 
 import static com.codeborne.selenide.Condition.text;
@@ -17,6 +18,7 @@ public class DatesPage {
         Selenide.page(this);
     }
 
+    @Step
     private void dragAndDropSlider(SelenideElement slider, int value) {
         Selenide.actions().clickAndHold(slider).build().perform();
 
@@ -29,6 +31,7 @@ public class DatesPage {
         Selenide.actions().release().build().perform();
     }
 
+    @Step
     public void dragAndDropSliders(int leftValue, int rightValue) {
         if (leftValue > Integer.parseInt(rightSlider.getText())) {
             dragAndDropSlider(rightSlider, rightValue);

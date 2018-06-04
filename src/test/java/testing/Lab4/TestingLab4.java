@@ -2,6 +2,7 @@ package testing.Lab4;
 
 import com.codeborne.selenide.Configuration;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import testing.Lab3.constants.DatesConstants;
 import testing.Lab3.constants.DifferentElementsConstants;
@@ -10,13 +11,13 @@ import testing.Lab3.pageObjects.DatesPage;
 import testing.Lab3.pageObjects.DifferentElementsPage;
 import testing.Lab3.pageObjects.IndexPage;
 
-
+@Listeners(AllureListener.class)
 public class TestingLab4 {
     private static IndexPage indexPage;
     private static DifferentElementsPage differentElementsPage;
     private static DatesPage datesPage;
 
-    @BeforeClass
+    @BeforeClass(description = "Set browser and initialize pages")
     public void beforeSuite() {
         Configuration.browser = "chrome";
         indexPage = new IndexPage();
@@ -24,7 +25,7 @@ public class TestingLab4 {
         datesPage = new DatesPage();
     }
 
-    @Test
+    @Test(description = "Test home page and elements")
     public void Task1() {
         indexPage.open(IndexConstants.URL.strValue);
 
@@ -70,7 +71,7 @@ public class TestingLab4 {
         differentElementsPage.checkCheckboxInLog(DifferentElementsConstants.CHECKBOX_3_NAME.strValue, "false");
     }
 
-    @Test
+    @Test(description = "Test sliders")
     public void Task2() {
         indexPage.open(IndexConstants.URL.strValue);
 

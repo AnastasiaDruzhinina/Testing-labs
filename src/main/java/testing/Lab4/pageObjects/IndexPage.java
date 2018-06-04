@@ -3,6 +3,7 @@ package testing.Lab4.pageObjects;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import org.openqa.selenium.support.FindBy;
 
 import static com.codeborne.selenide.Condition.text;
@@ -62,10 +63,12 @@ public class IndexPage {
         Selenide.open(Url);
     }
 
+    @Step
     public void checkTitle(String title) {
         assert Selenide.title().equals(title);
     }
 
+    @Step
     public void checkLogin(String login, String password, String username) {
         loginMenu.click();
         loginInput.setValue(login);
@@ -75,14 +78,17 @@ public class IndexPage {
         userName.shouldHave(text(username));
     }
 
+    @Step
     public void checkMainHeader(String headerText) {
         mainHeader.shouldHave(text(headerText));
     }
 
+    @Step
     public void checkMainText(String text) {
         mainText.shouldHave(text(text));
     }
 
+    @Step
     public void checkPictureTexts(String[] texts) {
         pictureTexts.shouldHaveSize(texts.length);
 
@@ -92,12 +98,14 @@ public class IndexPage {
         }
     }
 
+    @Step
     public void checkPictures(int size) {
         pictures.shouldHaveSize(size);
         for (SelenideElement picture : pictures)
             picture.shouldBe(visible);
     }
 
+    @Step
     public void checkHeadDropdown(String[] menuTexts) {
         if (!menuServiceHead.isDisplayed())
             serviceHead.click();
@@ -106,6 +114,7 @@ public class IndexPage {
         serviceHead.click();
     }
 
+    @Step
     public void checkLeftDropdown(String[] menuTexts) {
         if (!menuServiceLeft.isDisplayed())
             serviceLeft.click();
@@ -114,6 +123,7 @@ public class IndexPage {
         serviceLeft.click();
     }
 
+    @Step
     public void relocateToDifferentElements() {
         if (!menuServiceHead.isDisplayed())
             serviceHead.click();
@@ -121,6 +131,7 @@ public class IndexPage {
         differentElemnetsButton.click();
     }
 
+    @Step
     public void relocateToDates() {
         if (!menuServiceHead.isDisplayed())
             serviceHead.click();

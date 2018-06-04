@@ -4,6 +4,7 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.*;
 
@@ -36,6 +37,7 @@ public class DifferentElementsPage {
         Selenide.page(this);
     }
 
+    @Step
     public void checkElements(int checkboxNumber, int radioNumber) {
         leftSection.shouldBe(visible);
         rightSection.shouldBe(visible);
@@ -54,33 +56,40 @@ public class DifferentElementsPage {
         defaultButton.shouldBe(visible);
     }
 
+    @Step
     public void selectCheckbox(String name) {
         checkboxes.find(text(name)).$("[type=checkbox]").setSelected(true);
         checkboxes.find(text(name)).$("[type=checkbox]").shouldBe(checked);
     }
 
+    @Step
     public void unselectCheckbox(String name) {
         checkboxes.find(text(name)).$("[type=checkbox]").setSelected(false);
         checkboxes.find(text(name)).$("[type=checkbox]").shouldNotBe(checked);
     }
 
+    @Step
     public void selectRadio(String value) {
         radios.find(text(value)).$("[type=radio]").setSelected(true);
         radios.find(text(value)).$("[type=radio]").shouldBe(selected);
     }
 
+    @Step
     public void selectDropdown(String value) {
         colors.selectOption(value);
     }
 
+    @Step
     public void checkCheckboxInLog(String name, String value) {
         logs.shouldHave(text(String.format("%s: condition changed to %s", name, value)));
     }
 
+    @Step
     public void checkRadioInLog(String value) {
         logs.shouldHave(text(String.format("metal: value changed to %s", value)));
     }
 
+    @Step
     public void checkDropdownInLog(String value) {
         logs.shouldHave(text(String.format("Colors: value changed to %s", value)));
     }
