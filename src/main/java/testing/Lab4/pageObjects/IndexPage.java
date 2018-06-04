@@ -63,12 +63,12 @@ public class IndexPage {
         Selenide.open(Url);
     }
 
-    @Step
+    @Step("Check title")
     public void checkTitle(String title) {
         assert Selenide.title().equals(title);
     }
 
-    @Step
+    @Step("Check login")
     public void checkLogin(String login, String password, String username) {
         loginMenu.click();
         loginInput.setValue(login);
@@ -78,12 +78,12 @@ public class IndexPage {
         userName.shouldHave(text(username));
     }
 
-    @Step
+    @Step("Check main header")
     public void checkMainHeader(String headerText) {
         mainHeader.shouldHave(text(headerText));
     }
 
-    @Step
+    @Step("Check main text")
     public void checkMainText(String text) {
         mainText.shouldHave(text(text));
     }
@@ -98,14 +98,14 @@ public class IndexPage {
         }
     }
 
-    @Step
+    @Step("Check pictures")
     public void checkPictures(int size) {
         pictures.shouldHaveSize(size);
         for (SelenideElement picture : pictures)
             picture.shouldBe(visible);
     }
 
-    @Step
+    @Step("Check header dropdown")
     public void checkHeadDropdown(String[] menuTexts) {
         if (!menuServiceHead.isDisplayed())
             serviceHead.click();
@@ -114,7 +114,7 @@ public class IndexPage {
         serviceHead.click();
     }
 
-    @Step
+    @Step("Check left dropdown")
     public void checkLeftDropdown(String[] menuTexts) {
         if (!menuServiceLeft.isDisplayed())
             serviceLeft.click();
@@ -123,7 +123,7 @@ public class IndexPage {
         serviceLeft.click();
     }
 
-    @Step
+    @Step("Relocate to elements")
     public void relocateToDifferentElements() {
         if (!menuServiceHead.isDisplayed())
             serviceHead.click();
@@ -131,7 +131,7 @@ public class IndexPage {
         differentElemnetsButton.click();
     }
 
-    @Step
+    @Step("Relocate to dates")
     public void relocateToDates() {
         if (!menuServiceHead.isDisplayed())
             serviceHead.click();

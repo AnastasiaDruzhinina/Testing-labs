@@ -18,7 +18,6 @@ public class DatesPage {
         Selenide.page(this);
     }
 
-    @Step
     private void dragAndDropSlider(SelenideElement slider, int value) {
         Selenide.actions().clickAndHold(slider).build().perform();
 
@@ -31,7 +30,7 @@ public class DatesPage {
         Selenide.actions().release().build().perform();
     }
 
-    @Step
+    @Step("Drag and drop sliders")
     public void dragAndDropSliders(int leftValue, int rightValue) {
         if (leftValue > Integer.parseInt(rightSlider.getText())) {
             dragAndDropSlider(rightSlider, rightValue);

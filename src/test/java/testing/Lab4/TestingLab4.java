@@ -4,12 +4,13 @@ import com.codeborne.selenide.Configuration;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import testing.Lab3.constants.DatesConstants;
-import testing.Lab3.constants.DifferentElementsConstants;
-import testing.Lab3.constants.IndexConstants;
-import testing.Lab3.pageObjects.DatesPage;
-import testing.Lab3.pageObjects.DifferentElementsPage;
-import testing.Lab3.pageObjects.IndexPage;
+
+import testing.Lab4.constants.DatesConstants;
+import testing.Lab4.constants.DifferentElementsConstants;
+import testing.Lab4.constants.IndexConstants;
+import testing.Lab4.pageObjects.DatesPage;
+import testing.Lab4.pageObjects.DifferentElementsPage;
+import testing.Lab4.pageObjects.IndexPage;
 
 @Listeners(AllureListener.class)
 public class TestingLab4 {
