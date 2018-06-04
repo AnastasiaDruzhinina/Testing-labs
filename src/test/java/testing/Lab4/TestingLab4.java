@@ -74,10 +74,6 @@ public class TestingLab4 {
 
     @Test(description = "Test sliders")
     public void Task2() {
-        indexPage.open(IndexConstants.URL.strValue);
-
-        indexPage.checkTitle(IndexConstants.TITLE.strValue);
-
         indexPage.relocateToDates();
 
         datesPage.dragAndDropSliders(DatesConstants.FIRST_TEST.values[0], DatesConstants.FIRST_TEST.values[1]);

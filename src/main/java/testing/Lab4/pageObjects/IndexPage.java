@@ -59,6 +59,7 @@ public class IndexPage {
         Selenide.page(this);
     }
 
+    @Step("Open page")
     public void open(String Url) {
         Selenide.open(Url);
     }
@@ -88,7 +89,7 @@ public class IndexPage {
         mainText.shouldHave(text(text));
     }
 
-    @Step
+    @Step("Check picture texts")
     public void checkPictureTexts(String[] texts) {
         pictureTexts.shouldHaveSize(texts.length);
 
