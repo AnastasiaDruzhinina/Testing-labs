@@ -4,7 +4,6 @@ import com.codeborne.selenide.Configuration;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import testing.Lab4.constants.DatesConstants;
 import testing.Lab4.constants.DifferentElementsConstants;
 import testing.Lab4.constants.IndexConstants;
@@ -72,13 +71,13 @@ public class TestingLab4 {
         differentElementsPage.checkCheckboxInLog(DifferentElementsConstants.CHECKBOX_3_NAME.strValue, "false");
     }
 
-    @Test(description = "Test sliders")
-    public void Task2() {
-        indexPage.relocateToDates();
-
-        datesPage.dragAndDropSliders(DatesConstants.FIRST_TEST.values[0], DatesConstants.FIRST_TEST.values[1]);
-        datesPage.dragAndDropSliders(DatesConstants.SECOND_TEST.values[0], DatesConstants.SECOND_TEST.values[1]);
-        datesPage.dragAndDropSliders(DatesConstants.THIRD_TEST.values[0], DatesConstants.THIRD_TEST.values[1]);
-        datesPage.dragAndDropSliders(DatesConstants.FOURTH_TEST.values[0], DatesConstants.FOURTH_TEST.values[1]);
-    }
+//    @Test(description = "Test sliders")
+//    public void Task2() {
+//        indexPage.relocateToDates();
+//
+//        datesPage.dragAndDropSliders(DatesConstants.FIRST_TEST.values[0], DatesConstants.FIRST_TEST.values[1]);
+//        datesPage.dragAndDropSliders(DatesConstants.SECOND_TEST.values[0], DatesConstants.SECOND_TEST.values[1]);
+//        datesPage.dragAndDropSliders(DatesConstants.THIRD_TEST.values[0], DatesConstants.THIRD_TEST.values[1]);
+//        datesPage.dragAndDropSliders(DatesConstants.FOURTH_TEST.values[0], DatesConstants.FOURTH_TEST.values[1]);
+//    }
 }
