@@ -4,10 +4,8 @@ import com.codeborne.selenide.Configuration;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import testing.Lab4.constants.DatesConstants;
 import testing.Lab4.constants.DifferentElementsConstants;
 import testing.Lab4.constants.IndexConstants;
-import testing.Lab4.pageObjects.DatesPage;
 import testing.Lab4.pageObjects.DifferentElementsPage;
 import testing.Lab4.pageObjects.IndexPage;
 
@@ -15,14 +13,12 @@ import testing.Lab4.pageObjects.IndexPage;
 public class TestingLab4 {
     private static IndexPage indexPage;
     private static DifferentElementsPage differentElementsPage;
-    private static DatesPage datesPage;
 
     @BeforeClass(description = "Set browser and initialize pages")
     public void beforeSuite() {
         Configuration.browser = "chrome";
         indexPage = new IndexPage();
         differentElementsPage = new DifferentElementsPage();
-        datesPage = new DatesPage();
     }
 
     @Test(description = "Test home page and elements")
@@ -70,14 +66,4 @@ public class TestingLab4 {
         differentElementsPage.checkCheckboxInLog(DifferentElementsConstants.CHECKBOX_1_NAME.strValue, "false");
         differentElementsPage.checkCheckboxInLog(DifferentElementsConstants.CHECKBOX_3_NAME.strValue, "false");
     }
-
-//    @Test(description = "Test sliders")
-//    public void Task2() {
-//        indexPage.relocateToDates();
-//
-//        datesPage.dragAndDropSliders(DatesConstants.FIRST_TEST.values[0], DatesConstants.FIRST_TEST.values[1]);
-//        datesPage.dragAndDropSliders(DatesConstants.SECOND_TEST.values[0], DatesConstants.SECOND_TEST.values[1]);
-//        datesPage.dragAndDropSliders(DatesConstants.THIRD_TEST.values[0], DatesConstants.THIRD_TEST.values[1]);
-//        datesPage.dragAndDropSliders(DatesConstants.FOURTH_TEST.values[0], DatesConstants.FOURTH_TEST.values[1]);
-//    }
 }
