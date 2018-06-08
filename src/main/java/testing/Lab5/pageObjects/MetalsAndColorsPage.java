@@ -18,18 +18,23 @@ public class MetalsAndColorsPage extends WebPage {
             list = @FindBy(css = "li"),
             value = @FindBy(css = "button"))
     public ComboBox components;
+
     @FindBy(css = ".radio")
     private RadioButtons radios;
+
     @JFindBy(css = "#elements-checklist .checkbox label")
     private CheckList elements;
+
     @JDropdown(root = @FindBy(css = ".colors"),
             list = @FindBy(tagName = "li"))
     private Dropdown colors;
+
     @JComboBox(root = @FindBy(css = ".metals"),
             expand = @FindBy(css = ".caret"),
             list = @FindBy(css = "li"),
             value = @FindBy(css = "input[type='text']"))
     private ComboBox metals;
+
     @FindBy(css = ".panel-body-list.results li")
     private TextList resultLog;
 
@@ -74,7 +79,6 @@ public class MetalsAndColorsPage extends WebPage {
         //Проверка цвета
         value = new StringBuilder("Color: " + dataSet.getColor());
         Assert.assertContains(resultLog.getValue(), value.toString());
-
 
         //Проверка металла
         value = new StringBuilder("Metal: " + dataSet.getMetal());
