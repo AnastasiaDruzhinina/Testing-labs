@@ -37,3 +37,4 @@ packages/
 *.iml
 [Bb]uild
 /allure*/
+/.logs
