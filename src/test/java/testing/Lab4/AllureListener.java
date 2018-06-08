@@ -26,4 +26,9 @@ public class AllureListener extends TestListenerAdapter {
     public void onTestFailure(ITestResult iTestResult) {
         makeScreenshot();
     }
+
+    @Override
+    public void onTestSuccess(ITestResult iTestResult) {
+        makeScreenshot();
+    }
 }
