@@ -131,12 +131,4 @@ public class IndexPage {
 
         differentElemnetsButton.click();
     }
-
-    @Step("Relocate to dates")
-    public void relocateToDates() {
-        if (!menuServiceHead.isDisplayed())
-            serviceHead.click();
-
-        datesButton.click();
-    }
 }
