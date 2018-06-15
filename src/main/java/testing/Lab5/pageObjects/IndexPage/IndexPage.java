@@ -16,9 +16,9 @@ public class IndexPage extends WebPage {
     @FindBy(css = ".uui-navigation a[href='page2.htm']")
     private Button metalsAndColorsPageReference;
 
-    public void login(String name, String password) {
+    public void login(User user) {
         profileMenu.click();
-        loginForm.loginAs(new UserData(name, password));
+        loginForm.loginAs(user);
     }
 
     public void openMetalsAndColorsPage() {

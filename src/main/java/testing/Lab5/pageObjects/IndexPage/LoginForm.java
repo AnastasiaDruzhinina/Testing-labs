@@ -5,7 +5,7 @@ import com.epam.jdi.uitests.web.selenium.elements.common.TextField;
 import com.epam.jdi.uitests.web.selenium.elements.composite.Form;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JFindBy;
 
-public class LoginForm extends Form<UserData> {
+public class LoginForm extends Form<User> {
     @JFindBy(id = "Login")
     public TextField name;
 

@@ -8,6 +8,7 @@ import testing.Lab5.constants.BaseConstants;
 import testing.Lab5.constants.IndexConstants;
 import testing.Lab5.dataProvider.DataSet;
 import testing.Lab5.dataProvider.Provider;
+import testing.Lab5.pageObjects.IndexPage.User;
 
 import static com.epam.jdi.uitests.core.settings.JDISettings.driverFactory;
 import static testing.Lab5.Site.indexPage;
@@ -23,7 +24,7 @@ public class TestingLab5 extends TestNGBase {
         WebSite.open();
 
         //Логинимся
-        indexPage.login(IndexConstants.LOGIN.strValue, IndexConstants.PASSWORD.strValue);
+        indexPage.login(new User(IndexConstants.LOGIN.strValue, IndexConstants.PASSWORD.strValue));
         //Переходим на страницу с металлами
         indexPage.openMetalsAndColorsPage();
         //Отменяем галочку на "Salad"
